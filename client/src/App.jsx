@@ -13,7 +13,7 @@ function App() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:4000/events')
+        axios.get('https://event-dashboard.onrender.com/events')
             .then(response => {
                 setEvents(response.data);
 
@@ -39,7 +39,7 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/events',
+        axios.post('https://event-dashboard.onrender.com/events',
             formData)
             .then(response => {
                 // handle success
@@ -63,7 +63,7 @@ function App() {
 
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:4000/events/${id}`)
+        axios.delete(`https://event-dashboard.onrender.com/events/${id}`)
             .then(response => {
                 // handle success
                 console.log('Event deleted successfully:', response.data);

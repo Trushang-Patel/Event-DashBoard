@@ -12,7 +12,7 @@ function Update() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:4000/events/${id}`)
+            .get(`https://event-dashboard.onrender.com/events/${id}`)
             .then(response => {
                 setEvent(response.data);
                 setIsLoading(false);
@@ -42,7 +42,7 @@ function Update() {
         };
 
         axios
-            .put(`http://localhost:4000/events/${id}`, updatedEvent)
+            .put(`https://event-dashboard.onrender.com/events/${id}`, updatedEvent)
             .then(() => {
                 // Handle successful update
                 alert('Event updated successfully!');
@@ -57,7 +57,7 @@ function Update() {
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container my-2">
-                    <h4>GFG Event</h4>
+                    <h4>Trushang Event</h4>
                     <Link className="btn btn-primary ml-auto" to="/dashboard">
                         Dashboard
                     </Link>
